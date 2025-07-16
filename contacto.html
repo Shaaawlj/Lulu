@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu - Home & Table | Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Barra de navegación premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">
+                <span class="text-gold">Lulu</span> - Home & Table
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-outline-gold" href="#">
+                            <i class="bi bi-person"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado de contacto -->
+    <header class="contact-header bg-light-custom py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Contacto</h1>
+            <p class="lead">Estamos aquí para atenderte</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="section-title text-start mb-4">Escríbenos</h2>
+                <p>Para consultas sobre productos, pedidos personalizados o cualquier otra información, completa el siguiente formulario y te responderemos en un plazo máximo de 24 horas.</p>
+                
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo *</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu nombre.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico *</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa un correo válido.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Asunto *</label>
+                        <select class="form-select" id="asunto" required>
+                            <option value="" selected disabled>Selecciona un asunto</option>
+                            <option>Consulta sobre productos</option>
+                            <option>Pedido personalizado</option>
+                            <option>Problema con mi pedido</option>
+                            <option>Eventos especiales</option>
+                            <option>Otro</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor selecciona un asunto.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje *</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor escribe tu mensaje.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="privacidad" required>
+                        <label class="form-check-label" for="privacidad">Acepto la política de privacidad *</label>
+                        <div class="invalid-feedback">
+                            Debes aceptar la política de privacidad.
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-gold">Enviar mensaje</button>
+                </form>
+            </div>
+            
+            <div class="col-lg-6">
+                <h2 class="section-title text-start mb-4">Información de contacto</h2>
+                
+                <!-- Tabla de horarios mejorada -->
+                <div class="mb-5">
+                    <h5 class="text-gold mb-3"><i class="bi bi-clock-history me-2"></i>Horario de atención</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Lunes a Viernes</td>
+                                    <td>9:00 - 18:00</td>
+                                    <td class="text-end">
+                                        <span class="badge bg-success">Disponible</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Sábados</td>
+                                    <td>10:00 - 14:00</td>
+                                    <td class="text-end">
+                                        <span class="badge bg-warning text-dark">Medio día</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Domingos</td>
+                                    <td>Cerrado</td>
+                                    <td class="text-end">
+                                        <span class="badge bg-secondary">No disponible</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabla de canales de contacto -->
+                <div class="mb-5">
+                    <h5 class="text-gold mb-3"><i class="bi bi-headset me-2"></i>Canales de contacto</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-borderless">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Método</th>
+                                    <th>Detalle</th>
+                                    <th class="text-end">Tiempo respuesta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="bi bi-telephone text-gold me-2"></i> Teléfono</td>
+                                    <td>+34 910 123 456</td>
+                                    <td class="text-end">Inmediato</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="bi bi-whatsapp text-gold me-2"></i> WhatsApp</td>
+                                    <td>+34 610 123 456</td>
+                                    <td class="text-end">≤ 1 hora</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="bi bi-envelope text-gold me-2"></i> Email</td>
+                                    <td>info@luluhome.com</td>
+                                    <td class="text-end">24 horas</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="bi bi-calendar-check text-gold me-2"></i> Cita showroom</td>
+                                    <td>Calle Textil 123</td>
+                                    <td class="text-end">Programable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabla de equipo de contacto -->
+                <div class="mb-4">
+                    <h5 class="text-gold mb-3"><i class="bi bi-people me-2"></i>Equipo de contacto</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-borderless">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Cargo</th>
+                                    <th class="text-end">Contacto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Laura Martínez</td>
+                                    <td>Atención al cliente</td>
+                                    <td class="text-end">
+                                        <a href="mailto:laura@luluhome.com" class="text-gold">laura@luluhome.com</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Carlos Rodríguez</td>
+                                    <td>Ventas corporativas</td>
+                                    <td class="text-end">
+                                        <a href="mailto:carlos@luluhome.com" class="text-gold">carlos@luluhome.com</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Ana Sánchez</td>
+                                    <td>Eventos especiales</td>
+                                    <td class="text-end">
+                                        <a href="mailto:eventos@luluhome.com" class="text-gold">eventos@luluhome.com</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="mt-5">
+                    <h5 class="text-gold mb-3"><i class="bi bi-geo-alt me-2"></i>Ubicación</h5>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14464.013739181852!2d-71.01029976348534!3d24.99999924541051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89451ab5034cb7ab%3A0xb600ecf3df7aca4d!2sTri%C3%A1ngulo%20de%20las%20Bermudas!5e0!3m2!1ses!2spe!4v1752637348998!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="text-gold mb-4"><span class="text-gold">Lulu</span> - Home & Table</h3>
+                    <p>Elevando el arte de la mesa desde 2083. Mantelería fina para los viajeros del tiempo :D.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.instagram.com/_lulu.pe/" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-pinterest fs-5"></i></a>
+                        <a href="https://www.facebook.com/p/Lul%C3%BA-HomeTable-100083394283474/" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Colecciones</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Clásica</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Moderna</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Premium</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Personalización</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cuidado de textiles</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Asesoría de mesa</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Eventos especiales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Taller</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sostenibilidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="text-gold mb-4">Contacto</h5>
+                    <address>
+                        <p class="mb-2"><i class="bi bi-geo-alt-fill text-gold me-2"></i> Triángulo de las Bermudas</p>
+                        <p class="mb-2"><i class="bi bi-telephone-fill text-gold me-2"></i> +51 999 999 999</p>
+                        <p class="mb-2"><i class="bi bi-envelope-fill text-gold me-2"></i> servicioAlCliente@Lulu-Home&Table.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Lulu - Home & Table. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Términos y condiciones</a>
+                    <a href="#" class="text-white text-decoration-none">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

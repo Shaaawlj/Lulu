@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu - Home & Table | Productos de Mantelería</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Barra de navegación premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">
+                <span class="text-gold">Lulu</span> - Home & Table
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-outline-gold" href="#">
+                            <i class="bi bi-person"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado de productos -->
+    <header class="product-header bg-light-custom py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Nuestros Productos</h1>
+            <p class="lead">Selección exclusiva de mantelería fina</p>
+        </div>
+    </header>
+
+    <!-- Filtros de productos -->
+    <section class="py-4 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="nav nav-pills justify-content-center" id="productTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button">Todos</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="manteles-tab" data-bs-toggle="pill" data-bs-target="#manteles" type="button">Manteles</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="servilletas-tab" data-bs-toggle="pill" data-bs-target="#servilletas" type="button">Servilletas</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="runners-tab" data-bs-toggle="pill" data-bs-target="#runners" type="button">Runners</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="accesorios-tab" data-bs-toggle="pill" data-bs-target="#accesorios" type="button">Accesorios</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 mb-5">
+                <div class="sticky-top pt-3">
+                    <h5 class="text-gold mb-4">Refinar selección</h5>
+                    
+                    <div class="mb-4">
+                        <h6 class="mb-3">Material</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lino">
+                            <label class="form-check-label" for="lino">Lino Premium</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="algodon">
+                            <label class="form-check-label" for="algodon">Algodón Egipcio</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="seda">
+                            <label class="form-check-label" for="seda">Seda Natural</label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6 class="mb-3">Color</h6>
+                        <div class="color-filter">
+                            <button class="color-dot bg-white border active"></button>
+                            <button class="color-dot bg-cream"></button>
+                            <button class="color-dot bg-gold"></button>
+                            <button class="color-dot bg-charcoal"></button>
+                            <button class="color-dot bg-navy"></button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="mb-3">Precio</h6>
+                        <input type="range" class="form-range" min="50" max="500" step="50" id="priceRange">
+                        <div class="d-flex justify-content-between">
+                            <span>€50</span>
+                            <span>€500+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <div class="tab-content" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel">
+                        <div class="row g-4">
+                            <!-- Producto 1 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <div class="badge bg-gold position-absolute top-0 end-0 m-2">Nuevo</div>
+                                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" class="card-img-top" alt="Mantel Lino Premium">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mantel Lino Premium</h5>
+                                        <p class="card-text text-muted">Lino europeo de primera calidad, tejido a mano.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€189</span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal1">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 2 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Juego de Servilletas">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Juego de Servilletas</h5>
+                                        <p class="card-text text-muted">Set de 6 servilletas en algodón egipcio.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€129</span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal2">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 3 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <div class="badge bg-danger position-absolute top-0 end-0 m-2">-15%</div>
+                                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Runner Bordado">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Runner Bordado</h5>
+                                        <p class="card-text text-muted">Bordado artesanal con hilos de seda.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€159 <small class="text-muted text-decoration-line-through">€189</small></span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal3">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 4 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" class="card-img-top" alt="Mantel Redondo Vintage">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mantel Redondo Vintage</h5>
+                                        <p class="card-text text-muted">Diseño clásico en tejido de lino y algodón.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€149</span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal4">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 5 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <div class="badge bg-gold position-absolute top-0 end-0 m-2">Edición Limitada</div>
+                                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Set Completo Premium">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Set Completo Premium</h5>
+                                        <p class="card-text text-muted">Mantel, 12 servilletas y 4 runners coordinados.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€499</span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal5">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 6 -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card h-100 border-0">
+                                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Porta Servilletas">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Porta Servilletas</h5>
+                                        <p class="card-text text-muted">Anillos en plata bañada en oro.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-gold mb-0">€89</span>
+                                            <button class="btn btn-sm btn-outline-gold" data-bs-toggle="modal" data-bs-target="#productModal6">Ver detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-5">
+                            <button class="btn btn-outline-dark">Ver más productos</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Otras pestañas de categorías -->
+                    <div class="tab-pane fade" id="manteles" role="tabpanel">
+                        <!-- Contenido similar para manteles -->
+                    </div>
+                    <div class="tab-pane fade" id="servilletas" role="tabpanel">
+                        <!-- Contenido similar para servilletas -->
+                    </div>
+                    <div class="tab-pane fade" id="runners" role="tabpanel">
+                        <!-- Contenido similar para runners -->
+                    </div>
+                    <div class="tab-pane fade" id="accesorios" role="tabpanel">
+                        <!-- Contenido similar para accesorios -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Guía de tallas -->
+    <section class="py-5 bg-light-custom" id="guia-tallas">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start">Guía de Tallas</h2>
+                    <p>Encuentra el mantel perfecto para tu mesa. Nuestra guía te ayudará a seleccionar la medida ideal según el tamaño de tu mesa y el tipo de caída que prefieras.</p>
+                    
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered">
+                            <thead class="bg-gold text-white">
+                                <tr>
+                                    <th>Tamaño Mesa</th>
+                                    <th>Mantel Estándar</th>
+                                    <th>Caída Formal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Redonda Ø90cm</td>
+                                    <td>130cm</td>
+                                    <td>150cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Rectangular 160x90cm</td>
+                                    <td>200x130cm</td>
+                                    <td>240x150cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Cuadrada 120x120cm</td>
+                                    <td>180x180cm</td>
+                                    <td>200x200cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Guía de tallas" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Todo lo que necesitas saber sobre nuestros productos</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Pregunta 1 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                                    <i class="bi bi-question-circle text-gold me-2"></i>
+                                    ¿Cómo elijo el tamaño correcto de mantel?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Te recomendamos medir tu mesa y añadir:</p>
+                                    <ul>
+                                        <li><strong>Caída estándar:</strong> 30-40 cm por lado</li>
+                                        <li><strong>Caída formal:</strong> 50-60 cm por lado</li>
+                                    </ul>
+                                    <p>Ejemplo para mesa rectangular de 1.6m x 0.9m: <br>
+                                    <strong>Mantel ideal:</strong> 2.2m x 1.5m (caída formal de 30cm en lados largos y 30cm en cortos)</p>
+                                    <a href="#guia-tallas" class="text-gold">Ver guía de tallas completa</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="bi bi-question-circle text-gold me-2"></i>
+                                    ¿Qué materiales son más adecuados para uso diario?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Para uso frecuente recomendamos:</p>
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-check-circle-fill text-gold me-2"></i>
+                                        <div>
+                                            <strong>Algodón percal (200-300 hilos):</strong> Resistente y fácil de planchar
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="bi bi-check-circle-fill text-gold me-2"></i>
+                                        <div>
+                                            <strong>Lino belga:</strong> Naturalmente antiarrugas, ideal para look casual elegante
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">Evita sedas naturales para uso diario, son más delicadas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="bi bi-question-circle text-gold me-2"></i>
+                                    ¿Cómo cuidar los manteles para que duren más?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="text-gold">Lavado:</h6>
+                                            <ul>
+                                                <li>Máximo 30°C con detergente suave</li>
+                                                <li>Separar por colores</li>
+                                                <li>No usar suavizante (daña las fibras naturales)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="text-gold">Planchado:</h6>
+                                            <ul>
+                                                <li>Planchar del revés cuando aún está húmedo</li>
+                                                <li>Temperatura según material (consultar etiqueta)</li>
+                                                <li>Usar paño de algodón para sedas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        <strong>Tip:</strong> Guardar extendidos o enrollados, nunca doblados por mucho tiempo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="bi bi-question-circle text-gold me-2"></i>
+                                    ¿Hacen manteles a medida?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Sí, ofrecemos servicio de confección personalizada:</p>
+                                    <ol>
+                                        <li>Envíanos las medidas exactas de tu mesa</li>
+                                        <li>Selecciona el material y color</li>
+                                        <li>Elige tipo de caída (recta, festoneada, etc.)</li>
+                                    </ol>
+                                    <p><strong>Tiempo de producción:</strong> 2-3 años para pedidos estándar. <br>
+                                    <strong>Costo adicional:</strong> 15-30% sobre precio base según complejidad.</p>
+                                    <a href="contacto.html" class="btn btn-outline-gold btn-sm">Solicitar cotización</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="bi bi-question-circle text-gold me-2"></i>
+                                    ¿Qué incluye la garantía de calidad? (PDST: nada)
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Cubrimos defectos de fabricación por 1 minuto:</p>
+                                    <table class="table table-bordered">
+                                        <thead class="bg-gold text-white">
+                                            <tr>
+                                                <th>Cobertura</th>
+                                                <th>Detalles</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Hilos sueltos/bordados</td>
+                                                <td>Reparación gratuita en taller</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Decoloración anormal</td>
+                                                <td>Reemplazo del producto</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Costuras deshechas</td>
+                                                <td>Reparación o reemplazo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="small text-muted mt-2">* No cubre daños por mal uso o lavado incorrecto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <div class="card border-0 bg-light-custom py-4">
+                            <h5 class="text-gold">¿No encontraste respuesta? Uno de nuestros asistentes explotados laboralmente con sueldos miseros se pondra en contacto</h5>
+                            <p>Nuestro equipo de pakistanies está listo para ayudarte (les pagamos con pan de ayer)</p>
+                            <a href="contacto.html" class="btn btn-gold mx-auto" style="width: 200px;">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales de productos -->
+    <!-- Modal Producto 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productModal1Label">Mantel Lino Premium</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" class="img-fluid rounded" alt="Mantel Lino Premium">
+                            <div class="thumbnails mt-3">
+                                <img src="https://images.unsplash.com/photo-1606913850829-a2dd22758b8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Detalle" class="img-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1556910638-27d04c8ff0d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Ambientación" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-gold">S/189</h4>
+                            <p class="text-muted">REF: MLP-2023</p>
+                            <p>Mantel rectangular en lino europeo de primera calidad, tejido a mano por artesanos expertos. Disponible en tres tonos neutros que se adaptan a cualquier decoración.</p>
+                            
+                            <div class="mb-4">
+                                <h6>Color:</h6>
+                                <div class="color-options">
+                                    <button class="btn btn-sm color-option active" style="background-color: #F5F5DC;"></button>
+                                    <button class="btn btn-sm color-option" style="background-color: #E6D9C8;"></button>
+                                    <button class="btn btn-sm color-option" style="background-color: #D4C9B4;"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6>Tamaño:</h6>
+                                <select class="form-select">
+                                    <option>160x230cm</option>
+                                    <option>200x260cm</option>
+                                    <option>240x300cm</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6>Personalización:</h6>
+                                <input type="text" class="form-control" placeholder="Iniciales para bordar (máx. 3 letras)">
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-gold">Añadir al carrito</button>
+                                <button class="btn btn-outline-dark">Lista de deseos</button>
+                            </div>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="accordion" id="productAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            Detalles del producto
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>00.1% lino belga de primera calidad</li>
+                                                <li>Peso: 3100g/m² (medio)</li>
+                                                <li>Bordes hand-rolled a mano</li>
+                                                <li>Resistente a arrugas</li>
+                                                <li>Lavable a máquina 3000°C</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            Cuidados
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                        <div class="accordion-body">
+                                            <p>Lavar a máquina a minimo 3000°C. No usar Sosa cáustica. Planchar del revés cuando esté aún húmedo. Guardar extendido o enrollado, nunca doblado.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="text-gold mb-4"><span class="text-gold">Lulu</span> - Home & Table</h3>
+                    <p>Elevando en botes y en el arte de la mesa desde 1492. Mantelería fina para el descubrimiento de America.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.instagram.com/_lulu.pe/" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://www.pinterest.com/search/pins/?q=manteles%20para%20mesa&rs=ac&len=8&source_id=ac_nkTOKKVB&eq=manteles&etslf=2086" class="text-white me-3"><i class="bi bi-pinterest fs-5"></i></a>
+                        <a href="https://www.facebook.com/people/Lul%C3%BA-HomeTable/100083394283474/" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Colecciones</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Clásica</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Moderna</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Premium</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Personalización</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cuidado de textiles</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Asesoría de mesa</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Eventos especiales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Taller</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sostenibilidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="text-gold mb-4">Contacto</h5>
+                    <address>
+                        <p class="mb-2"><i class="bi bi-geo-alt-fill text-gold me-2"></i> Calle Textil 123, Madrid</p>
+                        <p class="mb-2"><i class="bi bi-telephone-fill text-gold me-2"></i> +51 999 999 999</p>
+                        <p class="mb-2"><i class="bi bi-envelope-fill text-gold me-2"></i> hola@luluhome.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Lulu - Home & Table. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Términos y condiciones</a>
+                    <a href="#" class="text-white text-decoration-none">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

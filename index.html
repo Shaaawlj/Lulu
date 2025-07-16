@@ -1,80 +1,314 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manteles Lulu</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lulu pescaditos.png" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu - Home & Table | Mantelería de Lujo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-  <nav>
-    <div class="logo">
-      <a href="#inicio">
-        <img src="IMG/LOGO LULU.png" alt="Logo Manteles Lulu" style="height: 100px;">
-      </a>
-    </div>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#productos">Catálogo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <header id="inicio">
-    <h1>Elegancia que viste tu mesa</h1>
-    <p>Manteles </p>
-  </header>
-
-  <main>
-    <section id="productos">
-      <h2>Nuestros productos mas innovadores</h2>
-      <div class="galeria">
-        <div class="producto">
-          <img src="IMG/Lulu semana santa.png" alt="Manteles para semana santa">
-          <h3>Manteles para semana santa</h3>
-          <p>Usamos nuestro camino aves verdes (perfecto para la ocasión), individuales de fibra, servilletas de tela y detalles naturales para componer esta propuesta.</p>
-          <button> <a href="/Mantel 1/Primer mantel.html">ver mas</a></button>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">
+                <span class="text-gold">Lulu</span> - Home & Table
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-outline-gold" href="#">
+                            <i class="bi bi-person"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="producto">
-          <img src="IMG/Navideño lulu.png" alt="Mantel Piedra Natural">
-          <h3>Piedra Natural</h3>
-          <p>Ideal para cenas familiares y espacios rústicos.</p>
-          <button><a href="/Mantel 2/Segundo mantel.html">Ver más</a></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold text-white mb-4">Elegancia en cada detalle</h1>
+                    <p class="lead text-white mb-5">Mantelería artesanal para momentos memorables</p>
+                    <a href="productos.html" class="btn btn-gold btn-lg">Descubrir colección</a>
+                </div>
+            </div>
         </div>
-        <div class="producto">
-          <img src="IMG/Lulu pescaditos.png" alt="Mantel De pescaditos bonitos :3">
-          <h3>Pescaditos bonitos :3</h3>
-          <p>Sofisticado, resistente, con acabado semi-mate.</p>
-          <button><a href="/Mantel 3/tercer mantel.html">Ver mas</a></button>
+    </header>
+
+    <!-- Colecciones -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nuestras Colecciones</h2>
+                <p class="section-subtitle">Selecciones curadas para paladares exigentes</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <img src="assets/Imagenes/Blog float.jpg" alt="Colección Clásica" class="img-fluid">
+                        <div class="collection-overlay">
+                            <h3>Clásica</h3>
+                            <p>Líneas puras y tejidos nobles</p>
+                            <a href="#" class="btn btn-outline-light">Ver colección</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <img src='assets/Imagenes/Blog lulu fondo.jpg'=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&auto=format&fit=crop&w=1170&q=80 alt="Colección Moderna" class="img-fluid">
+                        <div class="collection-overlay">
+                            <h3>Moderna</h3>
+                            <p>Diseños vanguardistas</p>
+                            <a href="#" class="btn btn-outline-light">Ver colección</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <img src="assets/Imagenes/caminos de lino Item03.jpg.png" alt="Colección Premium" class="img-fluid">
+                        <div class="collection-overlay">
+                            <h3>Premium</h3>
+                            <p>Materiales excepcionales</p>
+                            <a href="#" class="btn btn-outline-light">Ver colección</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-        </section>
+    </section>
 
-        <section id="contacto"></section>
-      <h2>Hablemos</h2>
-      <p>¿Tienes dudas o buscas un diseño personalizado? ¡Escríbenos! al +51 999 999 999</p>
-      <form>
-        <label for="nombre">Tu nombre:</label>
-        <input type="text" id="nombre" required>
+    <!-- Lookbook Digital -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Inspiración de Temporada</h2>
+                <p class="section-subtitle">Ambientaciones creadas por nuestro director creativo (yo)</p>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-4 lookbook-item" style="background-image: url(assets/Imagenes/Hojas\ celestes\ Item04.png)">
+                    <div class="lookbook-caption">
+                        <h3>Brunch Elegante</h3>
+                        <p>Colección "Lino & Oro"</p>
+                    </div>
+                </div>
+                <div class="col-md-4 lookbook-item" style="background-image: url(assets/Imagenes/Praderas\ Item01.png)">
+                    <div class="lookbook-caption">
+                        <h3>Cena Nocturna</h3>
+                        <p>Colección "Seda Negra"</p>
+                    </div>
+                </div>
+                <div class="col-md-4 lookbook-item" style="background-image: url(assets/Imagenes/Rayas\ plateadas\ Item05.png)">
+                    <div class="lookbook-caption">
+                        <h3>Bodas</h3>
+                        <p>Colección "Blanco Nupcial"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" required>
+    <!-- Proceso Artesanal -->
+    <section class="py-5 bg-light-custom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_Z-HttUuRiY?si=5ot1ynezKQOWuyef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start">Hecho a mano con tiempo</h2>
+                    <div class="row mt-4">
+                        <div class="col-6 mb-3">
+                            <div class="d-flex">
+                                <i class="bi bi-stopwatch text-gold fs-3 me-3"></i>
+                                <div>
+                                    <h5>72 Horas</h5>
+                                    <p class="small">Tejido manual por pieza</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex">
+                                <i class="bi bi-flower1 text-gold fs-3 me-3"></i>
+                                <div>
+                                    <h5>Algodón Orgánico</h5>
+                                    <p class="small">Cultivado en Portugal</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex">
+                                <i class="bi bi-scissors text-gold fs-3 me-3"></i>
+                                <div>
+                                    <h5>Bordado a mano</h5>
+                                    <p class="small">Detalles únicos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex">
+                                <i class="bi bi-gem text-gold fs-3 me-3"></i>
+                                <div>
+                                    <h5>Hilos de Oro</h5>
+                                    <p class="small">24k en edición limitada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" rows="4" required></textarea>
+    <!-- Testimonios -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Palabras de nuestros clientes</h2>
+                <p class="section-subtitle">La excelencia reconocida</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card text-center p-5">
+                                    <img src="https://tse1.mm.bing.net/th/id/OIP.UcWRs8vhGHagDSD6FY6yFgHaFf?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cliente" class="rounded-circle mb-4" width="100" height="100" style="object-fit: cover;">
+                                    <p class="lead mb-4">"Y yo por eso señor presidente, rechazo los cargos, totalmente, SOY INOCENTEEE!!! los manteles de lulu son los mejores"</p>
+                                    <h5 class="mb-1">Alberto Fujimori</h5>
+                                    <p class="text-muted">Ex-presidente</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-5">
+                                    <img src="https://okdiario.com/img/2021/04/12/pedro-castillo1.jpg" alt="Cliente" class="rounded-circle mb-4" width="100" height="100" style="object-fit: cover;">
+                                    <p class="lead mb-4">"El pollo estaba vivo... TAN VIVO COMO LOS COLORES EN LOS MANTELES DE LULU 10/10."</p>
+                                    <h5 class="mb-1">Peter Castle</h5>
+                                    <p class="text-muted">Intento de presidente e intento de profesor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <button type="submit">Enviar mensaje</button>
-      </form>
-        </section>
+    <!-- Newsletter -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2 class="mb-4">Únete a nuestro mundo</h2>
+                    <p class="mb-4">Recibe exclusivas, consejos de mesa y acceso anticipado a nuevas colecciones.</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-gold btn-lg w-100">Suscribirse</button>
+                        </div>
+                    </form>
+                    <p class="small mt-3">Respetamos tu privacidad. Nunca compartiremos tu información.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main>
+    <!-- Pie de página -->
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="text-gold mb-4"><span class="text-gold">Lulu</span> - Home & Table</h3>
+                    <p>Elevando el arte de la mesa desde 1985. Mantelería fina para los momentos más especiales.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-pinterest fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Colecciones</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Clásica</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Moderna</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Premium</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Personalización</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cuidado de textiles</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Asesoría de mesa</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Eventos especiales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-gold mb-4">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Taller</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sostenibilidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="text-gold mb-4">Contacto</h5>
+                    <address>
+                        <p class="mb-2"><i class="bi bi-geo-alt-fill text-gold me-2"></i> Calle Textil 123, Madrid</p>
+                        <p class="mb-2"><i class="bi bi-telephone-fill text-gold me-2"></i> +34 910 123 456</p>
+                        <p class="mb-2"><i class="bi bi-envelope-fill text-gold me-2"></i> hola@luluhome.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Lulu - Home & Table. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Términos y condiciones</a>
+                    <a href="#" class="text-white text-decoration-none">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 Mensaje de copyright </p>
-  </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

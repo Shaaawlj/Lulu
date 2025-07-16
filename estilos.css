@@ -1,0 +1,336 @@
+:root {
+    --gold: #C6A769;
+    --dark-gold: #A78B4D;
+    --black: #ab9f26;
+    --light-bg: #F9F7F3;
+    --dark-bg: #2A2A2A;
+    --cream: #F5F5DC;
+    --charcoal: #36454F;
+    --navy: #0F172A;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    padding-top: 72px;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.bg-custom {
+    background-color: var(--black) !important;
+}
+
+.bg-light-custom {
+    background-color: var(--light-bg) !important;
+}
+
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.bg-gold {
+    background-color: var(--gold) !important;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: white;
+    border-color: var(--gold);
+    transition: all 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: var(--dark-gold);
+    border-color: var(--dark-gold);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+    transition: all 0.3s;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/Imagenes/Foto\ fondo\ blog\ lulu.jpg") no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.collection-card:hover img {
+    transform: scale(1.05);
+}
+
+.collection-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.collection-card:hover .collection-overlay {
+    transform: translateY(0);
+}
+
+.lookbook-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.lookbook-item:hover {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+.lookbook-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lookbook-item:hover .lookbook-caption {
+    opacity: 1;
+}
+
+.product-card {
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+    border: 2px solid var(--gold);
+}
+
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.color-dot:hover {
+    transform: scale(1.1);
+}
+
+.color-dot.active {
+    border-color: var(--gold);
+    transform: scale(1.1);
+}
+
+.bg-cream { background-color: var(--cream); }
+.bg-charcoal { background-color: var(--charcoal); }
+.bg-navy { background-color: var(--navy); }
+
+.contact-info-card {
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateX(5px);
+    background-color: rgba(198, 167, 105, 0.05);
+}
+
+.team-card {
+    padding: 2rem;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+    
+    .hero-section {
+        height: 60vh;
+        text-align: center;
+    }
+    
+    .collection-card {
+        height: 300px;
+    }
+    
+    .lookbook-item {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.calculator-container {
+    border-left: 4px solid var(--gold);
+    transition: all 0.3s;
+}
+
+.calculator-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+/* Estilos para tablas mejoradas */
+.table-hover tbody tr {
+    transition: all 0.25s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(198, 167, 105, 0.05) !important;
+    transform: translateX(3px);
+}
+
+.table-borderless td, .table-borderless th {
+    border: none;
+}
+
+/* Badges de estado */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto sutil para celdas de tabla */
+.table td {
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+
+/* Encabezados de tabla */
+.table thead th {
+    border-bottom: 2px solid var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 0;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+    
+    .table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 8px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
